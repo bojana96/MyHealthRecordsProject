@@ -1,0 +1,26 @@
+﻿@model HealthRecords.Models.DoctorPatientReceipt
+@{
+    ViewBag.Title = "AddRececipt";
+}
+
+<h2>Add Rececipt</h2>
+
+@using (Html.BeginForm("AddReceipt", "Receipts"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Date)
+        @Html.TextBoxFor(m => m.Date)
+        @Html.ValidationMessageFor(m => m.Date)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextBoxFor(m => m.Description)
+    </div>
+    @Html.HiddenFor(m => m.PatientId)
+    @Html.HiddenFor(m => m.DoctorId)
+
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+
+
