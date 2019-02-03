@@ -1,0 +1,42 @@
+﻿@model HealthRecords.Models.DoctorPatientAppointment
+@{
+    /**/
+
+    ViewBag.Title = "RequestAppointment";
+}
+
+<h2>Request Appointment</h2>
+
+@using (Html.BeginForm("RequestAppointment", "Appointments"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
+        @Html.ValidationMessageFor(m => m.LastName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age)
+        @Html.ValidationMessageFor(m => m.Age)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Date)
+        @Html.TextBoxFor(m => m.Date)
+        @Html.ValidationMessageFor(m => m.Date)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Condition)
+        @Html.TextBoxFor(m => m.Condition)
+        @Html.ValidationMessageFor(m => m.Condition)
+    </div>
+    @Html.HiddenFor(m => m.PatientId)
+    @Html.HiddenFor(m => m.DoctorId)
+
+    <button type="submit" class="btn btn-primary">REQUEST</button>
+}
+
