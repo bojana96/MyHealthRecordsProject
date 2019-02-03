@@ -6,10 +6,10 @@ using System.Web;
 
 namespace HealthRecords.Models
 {
-    public class Appointment
+    public class DoctorPatientAppointment
     {
-        [Key]
-        public int Id { get; set; }
+        public int DoctorId { get; set; }
+        public int PatientId { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]
@@ -21,10 +21,5 @@ namespace HealthRecords.Models
         public string Date { get; set; }
         [Required]
         public string Condition { get; set; }
-        public Patient patient { get; set; }
-        public Doctor doctor { get; set; }
-
-
-
     }
 }

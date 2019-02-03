@@ -28,7 +28,9 @@ namespace HealthRecords.Models
         public DbSet<Receipt> Receipts { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
-       
+        
+        
+
 
 
         public ApplicationDbContext()
@@ -40,5 +42,7 @@ namespace HealthRecords.Models
         {
             return new ApplicationDbContext();
         }
+
+       
     }
 }

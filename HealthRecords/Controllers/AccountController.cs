@@ -22,7 +22,7 @@ namespace HealthRecords.Controllers
         public AccountController()
         {
         }
-
+        [Authorize(Roles = "Admin")]
         public ActionResult AddUserToRole()
         {
             AddUserToRole model = new AddUserToRole();
@@ -31,7 +31,7 @@ namespace HealthRecords.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult AddUserToRole(AddUserToRole model)
         {
             var email = model.Email;

@@ -41,7 +41,16 @@ namespace HealthRecords.Controllers
         {
             return View();
         }
-
+        [Authorize(Roles ="Doctor")]
+        public ActionResult Accept()
+        {
+            return View("Accept");
+        }
+        [Authorize(Roles ="Doctor")]
+        public ActionResult Decline()
+        {
+            return View("Decline");
+        }
         // POST: Doctors/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.

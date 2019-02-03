@@ -46,28 +46,7 @@ namespace HealthRecords.Controllers
             return View(model);
         }*/
 
-        [HttpPost]
-        public ActionResult SelectMeds(MedicineSelect model)
-        {
-            if (ModelState.IsValid)
-            {
-                List<Medicine> selected = model.SelectedMedicines;
-                float sum = 0;
-                foreach (Medicine med in selected)
-                
-                    sum += med.Price;
-
-                return RedirectToAction("ShowPrice", sum);
-            }
-            else return View(model);
-
-        }
-
-        public ActionResult ShowPrice(float sum)
-        {
-            ViewBag.sum = sum;
-            return View();
-        }
+        
         [Authorize(Roles ="Doctor")]
         // GET: Medicines/Create
         public ActionResult Create()

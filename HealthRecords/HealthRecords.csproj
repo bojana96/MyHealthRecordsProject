@@ -278,19 +278,58 @@
     <Compile Include="Migrations\201902022331498_public.Designer.cs">
       <DependentUpon>201902022331498_public.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902031209346_it.cs" />
+    <Compile Include="Migrations\201902031209346_it.Designer.cs">
+      <DependentUpon>201902031209346_it.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031220386_new.cs" />
+    <Compile Include="Migrations\201902031220386_new.Designer.cs">
+      <DependentUpon>201902031220386_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031225238_m.cs" />
+    <Compile Include="Migrations\201902031225238_m.Designer.cs">
+      <DependentUpon>201902031225238_m.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031242466_spot.cs" />
+    <Compile Include="Migrations\201902031242466_spot.Designer.cs">
+      <DependentUpon>201902031242466_spot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031303167_ug.cs" />
+    <Compile Include="Migrations\201902031303167_ug.Designer.cs">
+      <DependentUpon>201902031303167_ug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031332450_sok.cs" />
+    <Compile Include="Migrations\201902031332450_sok.Designer.cs">
+      <DependentUpon>201902031332450_sok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031352219_git.cs" />
+    <Compile Include="Migrations\201902031352219_git.Designer.cs">
+      <DependentUpon>201902031352219_git.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031357154_kafe.cs" />
+    <Compile Include="Migrations\201902031357154_kafe.Designer.cs">
+      <DependentUpon>201902031357154_kafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031404398_AddingAppointment.cs" />
+    <Compile Include="Migrations\201902031404398_AddingAppointment.Designer.cs">
+      <DependentUpon>201902031404398_AddingAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031427225_AppointmentUpdate.cs" />
+    <Compile Include="Migrations\201902031427225_AppointmentUpdate.Designer.cs">
+      <DependentUpon>201902031427225_AppointmentUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddUserToRole.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Diagnose.cs" />
     <Compile Include="Models\Doctor.cs" />
-    <Compile Include="Models\DoctorAppointment.cs" />
+    <Compile Include="Models\DoctorPatientAppointment.cs" />
     <Compile Include="Models\DoctorPatientDiagnose.cs" />
     <Compile Include="Models\DoctorPatientReceipt.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Medicine.cs" />
-    <Compile Include="Models\MedicineSelect.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\Receipt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -385,13 +424,16 @@
     <Content Include="Views\Receipts\AddReceipt.cshtml" />
     <Content Include="Views\Diagnoses\ShowDiagnoses.cshtml" />
     <Content Include="Views\Receipts\ShowReceipts.cshtml" />
-    <Content Include="Views\Medicines\ShowPrice.cshtml" />
-    <Content Include="Views\Medicines\SelectMeds.cshtml" />
     <Content Include="Views\Appointments\Create.cshtml" />
     <Content Include="Views\Appointments\Delete.cshtml" />
     <Content Include="Views\Appointments\Details.cshtml" />
     <Content Include="Views\Appointments\Edit.cshtml" />
     <Content Include="Views\Appointments\Index.cshtml" />
+    <Content Include="Views\Appointments\RequestAppointment.cshtml" />
+    <Content Include="Views\Appointments\ShowAppointments.cshtml" />
+    <Content Include="Views\Doctors\Accept.cshtml" />
+    <Content Include="Views\Doctors\Decline.cshtml" />
+    <Content Include="Views\Appointments\ShowAppointmentsPatient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -457,6 +499,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902022331498_public.resx">
       <DependentUpon>201902022331498_public.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031209346_it.resx">
+      <DependentUpon>201902031209346_it.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031220386_new.resx">
+      <DependentUpon>201902031220386_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031225238_m.resx">
+      <DependentUpon>201902031225238_m.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031242466_spot.resx">
+      <DependentUpon>201902031242466_spot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031303167_ug.resx">
+      <DependentUpon>201902031303167_ug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031332450_sok.resx">
+      <DependentUpon>201902031332450_sok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031352219_git.resx">
+      <DependentUpon>201902031352219_git.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031357154_kafe.resx">
+      <DependentUpon>201902031357154_kafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031404398_AddingAppointment.resx">
+      <DependentUpon>201902031404398_AddingAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031427225_AppointmentUpdate.resx">
+      <DependentUpon>201902031427225_AppointmentUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

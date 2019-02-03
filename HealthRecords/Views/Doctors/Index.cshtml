@@ -52,6 +52,7 @@
             @if (User.IsInRole("Patient"))
     {
         @Html.ActionLink("Details", "Details", new { id = item.Id })
+                @Html.ActionLink("Request an Appointment", "RequestAppointment", "Appointments", new { id = item.Id }, null)
 
     }
             @if(User.IsInRole("Doctor"))
@@ -64,5 +65,6 @@
 
     </tr>
 }
+    
 
 </table>
