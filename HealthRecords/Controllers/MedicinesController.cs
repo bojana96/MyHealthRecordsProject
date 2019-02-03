@@ -17,10 +17,13 @@ namespace HealthRecords.Controllers
 
         // GET: Medicines
         public ActionResult Index()
+
         {
+           
             return View(db.Medicines.ToList());
         }
-
+        
+        
         // GET: Medicines/Details/5
         public ActionResult Details(int? id)
         {
@@ -36,21 +39,22 @@ namespace HealthRecords.Controllers
             return View(medicine);
         }
 
-        public ActionResult SelectMedicines()
+        /*public ActionResult SelectMedicines()
         {
             MedicineSelect model = new MedicineSelect();
             model.Medicines = db.Medicines.ToList();
             return View(model);
-        }
+        }*/
 
         [HttpPost]
-        public ActionResult SelectMedicines(MedicineSelect model)
+        public ActionResult SelectMeds(MedicineSelect model)
         {
             if (ModelState.IsValid)
             {
-                IEnumerable<Medicine> selected = model.SelectedMedicines;
+                List<Medicine> selected = model.SelectedMedicines;
                 float sum = 0;
                 foreach (Medicine med in selected)
+                
                     sum += med.Price;
 
                 return RedirectToAction("ShowPrice", sum);

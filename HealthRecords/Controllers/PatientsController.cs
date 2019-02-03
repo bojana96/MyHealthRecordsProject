@@ -55,7 +55,7 @@ namespace HealthRecords.Controllers
             }
             return View(patient);
         }
-
+        [Authorize(Roles ="Doctor")]
         // GET: Patients/Create
         public ActionResult Create()
         {
@@ -67,6 +67,7 @@ namespace HealthRecords.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Doctor")]
         public ActionResult Create([Bind(Include = "Id,Name,Surname,Age,Address,Embg")] Patient patient)
         {
             if (ModelState.IsValid)
@@ -83,6 +84,7 @@ namespace HealthRecords.Controllers
         }
 
         // GET: Patients/Edit/5
+        [Authorize(Roles = "Doctor,Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -102,6 +104,7 @@ namespace HealthRecords.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Doctor,Admin")]
         public ActionResult Edit([Bind(Include = "Id,Name,Surname,Age,Address,Embg")] Patient patient)
         {
             if (ModelState.IsValid)
@@ -114,6 +117,7 @@ namespace HealthRecords.Controllers
         }
 
         // GET: Patients/Delete/5
+        [Authorize(Roles = "Doctor,Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -130,6 +134,7 @@ namespace HealthRecords.Controllers
 
         // POST: Patients/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Doctor,Admin")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {

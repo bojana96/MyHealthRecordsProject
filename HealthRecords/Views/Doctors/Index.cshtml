@@ -5,7 +5,7 @@
 }
 
 <h2>DOCTORS</h2>
-@if (User.IsInRole("Doctor"))
+@if (User.IsInRole("Admin"))
 {
 <p>
     @Html.ActionLink("Create New", "Create")

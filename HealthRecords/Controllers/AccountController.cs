@@ -26,7 +26,7 @@ namespace HealthRecords.Controllers
         public ActionResult AddUserToRole()
         {
             AddUserToRole model = new AddUserToRole();
-            model.Roles = new List<string>() { "Doctor", "Patient" };
+            model.Roles = new List<string>() { "Doctor", "Patient", "Admin" };
             return View(model);
         }
 
