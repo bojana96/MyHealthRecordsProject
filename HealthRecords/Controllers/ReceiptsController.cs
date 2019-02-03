@@ -32,7 +32,7 @@ namespace HealthRecords.Controllers
         {
             var user = UserManager.FindById(User.Identity.GetUserId());
             Patient patient = db.Patients.Where(z => z.Embg.Equals(user.Embg)).FirstOrDefault();
-            List<Receipt> receipts = db.Receipts.Where(z => z.Id.Equals(patient.Id)).ToList();
+            List<Receipt> receipts = db.Receipts.Where(z => z.Patient.Id.Equals(patient.Id)).ToList();
             return View(receipts);
         }
         public ActionResult AddReceipt(int id)

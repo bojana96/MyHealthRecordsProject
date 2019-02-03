@@ -1,0 +1,19 @@
+﻿@model HealthRecords.Models.MedicineSelect
+@{
+    ViewBag.Title = "SelectMeds";
+}
+
+<h2>SelectMeds</h2>
+@using (Html.BeginForm("SelectMeds", "Medicines"))
+{
+    <div class="editor-field">
+        @Html.CheckBoxListFor(model => model.SelectedMedicines,
+                             model => model.Medicines,
+                             x => x.Id,
+                             x => x.Name,
+                             model => model.SelectedMedicines)
+    </div>
+
+    <button type="submit"> BUY </button>
+
+}

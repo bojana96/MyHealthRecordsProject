@@ -65,7 +65,7 @@ namespace HealthRecords.Controllers
         {
             var user = UserManager.FindById(User.Identity.GetUserId());
             Patient patient = db.Patients.Where(z => z.Embg.Equals(user.Embg)).FirstOrDefault();
-            List<Diagnose> diagnoses = db.Diagnoses.Where(z => z.Id.Equals(patient.Id)).ToList();
+            List<Diagnose> diagnoses = db.Diagnoses.Where(z => z.Patient.Id.Equals(patient.Id)).ToList();
             return View(diagnoses);
         }
 

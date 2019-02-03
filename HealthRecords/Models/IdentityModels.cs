@@ -27,6 +27,10 @@ namespace HealthRecords.Models
         public DbSet<Diagnose> Diagnoses { get; set; }
         public DbSet<Receipt> Receipts { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+       
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
