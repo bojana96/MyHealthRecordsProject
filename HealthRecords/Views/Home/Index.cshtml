@@ -2,11 +2,35 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>MY HEALTH RECORDS</h1>
-    <p class="lead">MY HEALTH RECORDS IS A GOOD APPLICATION THAT HELPS YOU ORGANIZE EVERYTHING THAT IS IMPORTANT FOR YOUR HEALTH AND HEALTHY PROBLEMS.</p>
-    <p>
-        <img src="~/Images/Logo.jpg" style="max-width:300px; max-height:300px;align-self:center"/>
-    </p>
+<style>
+    .background {
+        background: url('../../Images/background.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        top: 0;
+    }
+
+    .layer {
+        background-color: rgba(243, 16, 171, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+</style>
+
+<div class="background" >
+    <div class="layer">
+        <!--<img src="~/Images/background.jpg" style="position: absolute; height: 100%; width: 100%; top: 0; left: 0;">-->
+    <p style="color: rgba(255, 230, 255, 1); font-size: 60px; text-shadow: 5px 5px 5px rgba(80, 63, 191, 0.46); font-family: Calibri; position:fixed; top: 35%; left: 30%;"><span style="font-weight: 800; font-family: Chiller; font-size: 80px;">MY</span>HealthRecords</p>
+    <p style="color: rgba(255, 230, 255, 1); font-size: 40px; font-family: Britannic;  position:fixed; top: 50%; left: 30%;">Healthcare at your desk!</p>
+    </div>
+    
 </div>
 
